@@ -1,15 +1,15 @@
-Simple Spark Application
+Spark Examples
 ==============
 
-A simple Spark application that counts the occurrence of each word in a corpus and then counts the
-occurrence of each character in the most popular words.  Includes the same program implemented in
-Java and Scala.
+# Build 
 
 To make a jar:
 
 ```
 mvn package
 ```
+
+# Run and test
 
 Upload inputfile.txt to hdfs:
 
@@ -20,15 +20,15 @@ hadoop fs -put inputfile.txt
 To run SparkWordCount  from a gateway node in a CDH5 cluster:
 
 ```
-spark-submit --class com.cloudera.sparkwordcount.SparkWordCount --master local \
-    sparkwordcount-0.0.1-SNAPSHOT.jar inputfile.txt 2
+spark-submit --class com.javachen.spark.wordcount.SparkWordCount --master local \
+    spark-examples-0.0.1-SNAPSHOT.jar inputfile.txt 2
 ```
 
 To run JavaWordCount from a gateway node in a CDH5 cluster:
 
 ```
-spark-submit --class com.cloudera.sparkwordcount.JavaWordCount --master local \
-    sparkwordcount-0.0.1-SNAPSHOT.jar inputfile.txt 2
+spark-submit --class com.javachen.spark.wordcount.JavaWordCount --master local \
+    spark-examples-0.0.1-SNAPSHOT.jar inputfile.txt 2
 ```
 
 To run PythonWordCount from a gateway node in a CDH5 cluster:
