@@ -24,7 +24,7 @@ import org.apache.spark.SparkConf
 
 object SparkWordCount {
   def main(args: Array[String]) {
-    val sc = new SparkContext(new SparkConf().setAppName("Spark Count"))
+    val sc = new SparkContext(new SparkConf().setAppName("SparkWordCount"))
     val threshold = args(1).toInt
     
     // split each document into words

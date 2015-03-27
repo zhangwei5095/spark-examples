@@ -34,7 +34,7 @@ import java.util.Collection;
 
 public class JavaWordCount {
     public static void main(String[] args) {
-        JavaSparkContext sc = new JavaSparkContext(new SparkConf().setAppName("Spark Count"));
+        JavaSparkContext sc = new JavaSparkContext(new SparkConf().setAppName("JavaWordCount"));
         final int threshold = Integer.parseInt(args[1]);
 
         // split each document into words
